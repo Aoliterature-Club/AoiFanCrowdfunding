@@ -2087,7 +2087,7 @@ input, select, textarea {
 					flex-shrink: 1;
 					padding: 3.5em 2.5em;
 					margin-bottom: 0;
-					width: 80%;
+					width: 100%;
 				}
 
 					#main > .panel.intro header h1 {
