@@ -95,9 +95,23 @@
 			}, userConfig);
 
 			// Expand "target" if it's not a jQuery object already.
-				if (typeof config.target != 'jQuery')
-					config.target = $(config.target);
-
+			// SECURITY: 'target' must be a jQuery object, a DOM element, or a CSS selector string.
+			// If a string is provided, it will be interpreted as a CSS selector, NOT as HTML.
+			if (window.jQuery && config.target instanceof window.jQuery) {
+				// Already a jQuery object, use as-is.
+			} else if (typeof config.target === 'string') {
+				// If string starts with '<', treat as invalid to prevent XSS.
+				if (config.target.trim().startsWith('<')) {
+					throw new Error("panel: 'target' option must not be HTML. Use a CSS selector or jQuery object.");
+				}
+				// Use find to interpret as CSS selector.
+				config.target = $.find ? $($.find(config.target)) : $(config.target);
+			} else if (config.target && config.target.nodeType === 1) {
+				// DOM element
+				config.target = $(config.target);
+			} else {
+				throw new Error("panel: 'target' option must be a jQuery object, DOM element, or CSS selector string.");
+			}
 		// Panel.
 
 			// Methods.
