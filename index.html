@@ -17,6 +17,7 @@
     <link rel="icon" href="favicon.ico" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/other.css" />
+    <link rel="stylesheet" href="assets/css/celebrator.css" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <noscript
       ><link rel="stylesheet" href="assets/css/noscript.css"
@@ -43,16 +44,21 @@
       <img src="images/logo2.jpg" alt="Loading Image" id="loading-image" />
     </div>
 
+    <div id="confetti-container"></div>
+
     <!-- Wrapper-->
     <div id="wrapper">
       <!-- Nav -->
       <nav id="nav">
-        <a href="#" class="icon solid fa-home"><span>首頁</span></a>
+        <a href="#home" class="icon solid fa-home"><span>首頁</span></a>
         <a href="#work" class="icon solid fa-info-circle"
           ><span>企劃內容</span></a
         >
         <a href="#user-list" class="icon solid fa-address-book"
           ><span>募資名單</span></a
+        >
+        <a href="#video" class="icon brands fa-youtube"
+          ><span>驚喜影片</span></a
         >
         <a href="#credits" class="icon solid fa-users"><span>幕後團隊</span></a>
         <a
@@ -70,7 +76,7 @@
 
       <!-- Main -->
       <div id="main">
-        <!-- Me -->
+        <!-- Home -->
         <article id="home" class="panel intro">
           <img
             src="images/logo.jpg"
@@ -648,6 +654,21 @@
               <li>及<u> 4 位</u>匿名贊助者</li>
             </ul>-->
           </header>
+        </article>
+
+        <article id="video" class="panel">
+          <center>
+            <iframe
+              width="640"
+              height="360"
+              src="https://www.youtube.com/embed/FK-ZUUbmND4"
+              title="謝謝妳出現在我們的世界，生日快樂Aoi！！！！！"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </center>
         </article>
 
         <article id="credits" class="panel">
@@ -1410,5 +1431,6 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/other.js"></script>
+    <script src="assets/js/celebrator.js"></script>
   </body>
 </html>
