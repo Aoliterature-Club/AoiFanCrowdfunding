@@ -50,16 +50,20 @@
     <div id="wrapper">
       <!-- Nav -->
       <nav id="nav">
-        <a href="#home" class="icon brands fa-youtube"
-          ><span>首頁-驚喜影片</span></a
+        <!--<a href="#intro" class="icon solid fa-home"><span>簡介</span></a>-->
+        <a
+          href="#intro"
+          onclick="document.getElementById('video-light').style.display='block';document.getElementById('fade').style.display='none'"
+          class="icon brands fa-youtube"
+          ><span>驚喜影片</span></a
         >
-        <a href="#intro" class="icon solid fa-home"><span>首頁-簡介</span></a>
         <a href="#work" class="icon solid fa-info-circle"
           ><span>企劃內容</span></a
         >
         <a href="#user-list" class="icon solid fa-address-book"
           ><span>募資名單</span></a
         >
+
         <a href="#credits" class="icon solid fa-users"><span>幕後團隊</span></a>
         <a
           href="https://x.com/weloveaoi"
@@ -77,22 +81,7 @@
       <!-- Main -->
       <div id="main">
         <!-- Home -->
-        <article id="home" class="panel">
-          <center>
-            <iframe
-              width="640"
-              height="360"
-              src="https://www.youtube.com/embed/FK-ZUUbmND4"
-              title="謝謝妳出現在我們的世界，生日快樂Aoi！！！！！"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
-          </center>
-        </article>
-
-        <article id="intro" class="panel">
+        <article id="intro" class="panel intro">
           <img
             src="images/logo.jpg"
             width="80%"
@@ -100,104 +89,139 @@
             id="loading-image-target"
           />
           <header>
-            <center>
-              <!--<p
+            <div id="video-light" class="white_content">
+              <iframe
+                width="100%"
+                height="360"
+                src="https://www.youtube.com/embed/FK-ZUUbmND4"
+                title="謝謝妳出現在我們的世界，生日快樂Aoi！！！！！"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+              <a
+                href="javascript:void(0)"
+                onclick="createConfetti();document.getElementById('video-light').style.display='none';document.getElementById('fade').style.display='block'"
+                ><u>[點我關閉影片-查看募資項目]</u></a
+              >
+            </div>
+            <div id="fade" class="black_overlay" hidden>
+              <div id="confetti-container"></div>
+              <center>
+                <!--<p
                 class="text-[#191011] text-base font-medium leading-normal"
                 style="font-size: 36px"
               >
                 患燃依心
               </p>-->
-              <p
-                class="text-[#191011] text-base font-medium leading-normal"
-                style="font-size: 18px; white-space: nowrap"
-              >
-                🎉 Aoi 2025生日燈箱南北應援募資企劃 🎉
-              </p>
-              <div>
-                <br />
                 <p
                   class="text-[#191011] text-base font-medium leading-normal"
                   style="font-size: 18px; white-space: nowrap"
                 >
-                  <b style="font-weight: 600">✨2025年07月28日 ～ 10月15日✨</b>
+                  🎉 Aoi 2025生日燈箱南北應援募資企劃 🎉
                 </p>
-              </div>
-            </center>
-            <div class="flex flex-col gap-3 p-4">
-              <div class="flex gap-6 justify-between">
-                <p style="font-size: 16px">Goal: NTD$ 270,000</p>
-              </div>
-              <div class="rounded h-3 bg-[#FFD2D2] flex items-center w-full">
-                <div class="h-3 rounded bg-[#FF9EA3]" style="width: 100%"></div>
-                <img
-                  src="images/sliderbar.jpg"
-                  alt="Progress Bar Header"
-                  class="w-[15%] h-auto max-w-[40px] max-h-[40px]"
-                />
-              </div>
-              <div class="flex gap-6 justify-between">
-                <p
-                  class="text-[#191011] text-base font-medium leading-normal"
-                  style="font-size: 16px"
-                >
-                  Now: <u>NTD$ 270, 000 (+10,620)</u>
-                </p>
-                <p
-                  class="text-[#191011] text-sm font-normal leading-normal"
-                  style="font-size: 16px"
-                >
-                  103.93%
-                </p>
-              </div>
-              <center class="" style="font-size: 14px; white-space: nowrap">
-                <u>（非即時資訊。最後更新時間：2025/10/16 00:01）</u>
-              </center>
-            </div>
-            <div>
-              <center>
-                <a href="#work">
-                  <input type="submit" value="查看完整企劃內容"
-                /></a>
-              </center>
-            </div>
-            <br />
-            <div>
-              <center>
-                <a href="#user-list"><u>參與募資名單</u></a>
-                &nbsp;|&nbsp;
-                <a href="#credits"><u>幕後團隊名單（含廠商）</u></a>
-              </center>
-              <br />
-              <p align="right" style="font-size: 20px">
-                燈箱企劃Hashtag：
-                <b
-                  ><u>
-                    <a
-                      href="https://x.com/hashtag/%E6%B5%81%E5%85%89%E4%BE%9D%E5%BD%A9"
-                      target="_blank"
-                      style="background-color: pink"
-                      >#流光依彩</a
-                    ></u
+                <div>
+                  <br />
+                  <p
+                    class="text-[#191011] text-base font-medium leading-normal"
+                    style="font-size: 18px; white-space: nowrap"
                   >
-                </b>
-              </p>
-              <center>
-                <hr
-                  width="100%"
-                  size="1"
-                  color="gray"
-                  style="padding: 0.03em 0 0 0; margin: 1.75em 0 0 0"
-                />
+                    <b style="font-weight: 600"
+                      >✨2025年07月28日 ～ 10月15日✨</b
+                    >
+                  </p>
+                </div>
               </center>
+              <div class="flex flex-col gap-3 p-4">
+                <div class="flex gap-6 justify-between">
+                  <p style="font-size: 16px">Goal: NTD$ 270,000</p>
+                </div>
+                <div class="rounded h-3 bg-[#FFD2D2] flex items-center w-full">
+                  <div
+                    class="h-3 rounded bg-[#FF9EA3]"
+                    style="width: 100%"
+                  ></div>
+                  <img
+                    src="images/sliderbar.jpg"
+                    alt="Progress Bar Header"
+                    class="w-[15%] h-auto max-w-[40px] max-h-[40px]"
+                  />
+                </div>
+                <div class="flex gap-6 justify-between">
+                  <p
+                    class="text-[#191011] text-base font-medium leading-normal"
+                    style="font-size: 16px"
+                  >
+                    Now: <u>NTD$ 270, 000 (+10,620)</u>
+                  </p>
+                  <p
+                    class="text-[#191011] text-sm font-normal leading-normal"
+                    style="font-size: 16px"
+                  >
+                    103.93%
+                  </p>
+                </div>
+                <center class="" style="font-size: 14px; white-space: nowrap">
+                  <u>（非即時資訊。最後更新時間：2025/10/16 00:01）</u>
+                </center>
+              </div>
+              <div>
+                <center>
+                  <a href="#work">
+                    <input type="submit" value="查看完整企劃內容"
+                  /></a>
+                </center>
+              </div>
+              <br />
+              <div>
+                <center>
+                  <a href="#user-list"><u>參與募資名單</u></a>
+                  &nbsp;|&nbsp;
+                  <a href="#credits"><u>幕後團隊名單（含廠商）</u></a>
+                </center>
+                <br />
+                <p align="right" style="font-size: 20px">
+                  燈箱企劃Hashtag：
+                  <b
+                    ><u>
+                      <a
+                        href="https://x.com/hashtag/%E6%B5%81%E5%85%89%E4%BE%9D%E5%BD%A9"
+                        target="_blank"
+                        style="background-color: pink"
+                        >#流光依彩</a
+                      ></u
+                    >
+                  </b>
+                </p>
+                <center>
+                  <hr
+                    width="100%"
+                    size="1"
+                    color="gray"
+                    style="padding: 0.03em 0 0 0; margin: 1.75em 0 0 0"
+                  />
+                </center>
 
-              <p style="font-size: 18px"><br />里程碑：</p>
-              <ul style="font-size: 16px">
-                <li>2025年07月29日 募資金額突破目標20%</li>
-                <li>2025年08月25日 募資金額突破目標40%</li>
-                <li>2025年09月08日 募資金額突破目標60%</li>
-                <li>2025年09月30日 募資金額突破目標80%</li>
-                <li><b>2025年10月04日 23點59分 募資達標‼️</b></li>
-              </ul>
+                <p style="font-size: 18px"><br />里程碑：</p>
+                <ul style="font-size: 16px">
+                  <li>2025年07月29日 募資金額突破目標20%</li>
+                  <li>2025年08月25日 募資金額突破目標40%</li>
+                  <li>2025年09月08日 募資金額突破目標60%</li>
+                  <li>2025年09月30日 募資金額突破目標80%</li>
+                  <li><b>2025年10月04日 23點59分 募資達標‼️</b></li>
+                </ul>
+                <br />
+                <p align="right" style="font-size: 20px">
+                  <u>
+                    <a
+                      href="javascript:void(0)"
+                      onclick="document.getElementById('video-light').style.display='block';document.getElementById('fade').style.display='none'"
+                      >[點我顯示驚喜影片]</a
+                    >
+                  </u>
+                </p>
+              </div>
             </div>
           </header>
         </article>

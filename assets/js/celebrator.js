@@ -1,9 +1,3 @@
-document.getElementById("confetti-button").onclick = createConfetti;
-
-window.onload = function () {
-  setTimeout(createConfetti, 500);
-};
-
 function createConfetti() {
   const container = document.getElementById("confetti-container");
   container.innerHTML = "";
